@@ -1,22 +1,31 @@
 #include <iostream>
 using namespace std;
-int main() {
+int main()
+{
     int start, end;
-    cout << "enter range :";
-    cin >> start >> end;
-    for (int i = start; i <= end; i++) {
-        if(i <= 1) continue;
-        bool isPrime = true;
-        for(int  j = 2; j <= i/2 ; j++) {
-            if (i % j == 0) {
-                isPrime = false ;
-                break;
+    cout << "enter starting no. of range :";
+    cin >> start;
+    cout << "enter ending no. of range :";
+    cin >> end;
+
+    if (start < 2)
+    {
+        start = 2;
+    }
+
+    for (int i = start; i <= end; i++)
+    {
+        int count = 0;
+        for (int j = 2; j <= i / 2; j++)
+        {
+            if (i % j == 0)
+            {
+                count++;
             }
         }
-        if(isPrime) {
-            cout << i << " ";
-        }
+        if (count == 0)
+            cout << i << '\n';
     }
-    cout << endl;
+
     return 0;
 }

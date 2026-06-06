@@ -1,16 +1,19 @@
 #include <iostream>
 using namespace std;
-int main() {
-    int a, b, gcd;
+int main()
+{
+    int i, a, b, gcd;
     cout << "enter two numbers : ";
     cin >> a >> b;
     int x = a, y = b;
-    while(y != 0) {
-        int temp = y;
-        y = x % y;
-        x = temp;
+
+    for (i = 1; i <= x && i <= y; i++)
+    {
+        if (x % i == 0 && y % i == 0)
+        {
+            gcd = i;
+        }
     }
-    gcd = x;
     int lcm = (a * b) / gcd;
     cout << "LCM of the two numbers is : " << lcm << endl;
     return 0;

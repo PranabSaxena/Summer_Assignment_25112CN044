@@ -6,13 +6,13 @@ cout << "enter a number : ";
 cin >> n;
 original = n;
 while (n != 0) {
-    int digit = n % 10;
-    reverse = reverse * 10 + digit ;
+    int remainder = n % 10;
+    reverse = reverse * 10 + remainder ;
     n = n / 10 ;
 }
 if (original == reverse)
-cout << "Entered number is Palindrome";
+cout << "Entered number is Palindrome" << '\n';
 else
-cout << "Entered number is not Palindrome" ;
+cout << "Entered number is not Palindrome" << '\n';
 return 0;
 }

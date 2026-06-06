@@ -1,14 +1,16 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int a,b;
+    int gcd, a, b;
     cout << "enter two numbers ; ";
     cin >> a >> b;
-    while( b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
+
+    for (int i = 1; i <= a && i <= b; i++)
+    {
+        if (a % i == 0 && b % i == 0)
+            gcd = i;
     }
-    cout << "GCD of the two numbers is : " << a << endl ;
+
+    cout << "GCD of the two numbers is : " << gcd << '\n';
     return 0;
-}
+} 

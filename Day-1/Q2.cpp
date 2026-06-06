@@ -4,8 +4,10 @@ int main () {
     int n;
     cout << "enter a number : ";
     cin >> n;
-    for (int i = 1; i <=10; i++) {
-        cout << n << " x " << i << " = " << n * i << endl;
-    }
+   
+for(int i=1; i<=n; i++) {
+cout << n << "x" << i << "=" << n*i << '\n';
+}
+
     return 0;
 }
